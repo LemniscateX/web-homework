@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web things</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <h1>Things we learn from web course</h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="./index.html#html">&lt;html&gt;元素</a>
+            </li>
+            <li>
+                <a href="./index.html#body">&lt;body&gt;元素</a>
+            </li>
+            <li>
+                <a href="./index.html#p">&lt;p&gt;元素</a>
+            </li>
+            <li>
+                <a href="./index.html#dldtdd">&lt;dl&gt;&lt;dt&gt;&lt;dd&gt;元素</a>
+            </li>
+            <li>
+                <a href="./index.html#blockquoteq">&lt;blockquote&gt;&lt;q&gt;元素</a>
+            </li>
+            <li>
+                <a href="./index.html#codepre">&lt;code&gt;&lt;pre&gt;元素</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="main">
+        <article id="html">
+            <h2>&lt;html&gt;</h2>
+            <p><q>html</q>标签定义了整个HTML文档,指的是从开始标签（start tag）到结束标签（end tag）的所有代码。</p>
+            <img src="./images/html.png" alt="example">
+        </article>
+
+        <article id="body">
+            <h2>&lt;body&gt;</h2>
+            <p><q>body</q>标签定义了HTML文档的主体。</p>
+            <img src="./images/body.png" alt="example">
+        </article>
+
+        <article id="p">
+            <h2>&lt;p&gt;</h2>
+            <p><q>p</q>标签定义了HTML文档中的一个段落。</p>
+            <img src="./images/p.png" alt="example">
+        </article>
+
+        <article id="dldtdd">
+            <h2>&lt;dl&gt;&lt;dt&gt;&lt;dd&gt;</h2>
+            <p><q>dl</q>标签定义了定义列表。dl标签用于结合dt（定义列表中的项目）和dd（描述列表中的项目）。</p>
+            <p><q>dt</q>标签定义了定义列表中的项目（即术语部分）。</p>
+            <p><q>dd</q>在定义列表中定义条目的定义部分。</p>
+            <img src="./images/dl,dt,dd.png" alt="example">
+        </article>
+
+        <article id="blockquoteq">
+            <h2>&lt;blockquote&gt;&lt;q&gt;</h2>
+            <p>
+                <q>blockquote</q>标签定义块引用。其之间的所有文本都会从常规文本中分离出来，经常会在左、右两边进行缩进（增加外边距），
+                而且有时会使用斜体。也就是说，块引用拥有它们自己的空间。
+            </p>
+            <p>
+                <q>q</q>标签定义短的引用。浏览器经常在引用的内容周围添加引号。
+            </p>
+            <p>
+                <q>q</q>标签在本质上与blockquote是一样的。不同之处在于它们的显示和应用q标签用于简短的行内引用。
+                如果需要从周围内容分离出来比较长的部分（通常显示为缩进的块），请使用blockquote标签。
+            </p>
+            <div id="table1">
+                <img src="./images/blockquote.png" alt="example" id="img1">
+                <img src="./images/q.png" alt="example" id="img2">
+            </div>
+            <p>
+                Example:<br>
+                使用blockquote标签：
+            <blockquote>
+                To be or not to be, this is a question.
+            </blockquote>
+            <br>
+            使用q标签：
+            <q>
+                To be or not to be, this is a question.
+            </q>
+            </p>
+        </article>
+
+        <article id="codepre">
+            <h2>&lt;code&gt;&lt;pre&gt;</h2>
+            <p>
+                <q>code</q>标签用于表示计算机源代码或者其他机器可以阅读的文本内容。
+                软件代码的编写者已经习惯了编写源代码时文本表示的特殊样式。code标签就是为他们设计的。
+                包含在该标签内的文本将用等宽、类似电传打字机样式的字体（Courier）显示出来，
+                对于大多数程序员和 W3School 的用户来说，这应该是十分熟悉的。
+                只应该在表示计算机程序源代码或者其他机器可以阅读的文本内容上使用code标签。
+                虽然code标签通常只是把文本变成等宽字体，但它暗示着这段文本是源程序代码。将来的浏览器有可能会加入其他显示效果。
+                例如，程序员的浏览器可能会寻找code片段，并执行某些额外的文本格式化处理，如循环和条件判断语句的特殊缩进等。
+            </p>
+            <p>
+                <q>pre</q>标签可定义预格式化的文本。被包围在pre元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。
+                如果您希望使用pre标签来定义计算机源代码，比如 HTML 源代码，请使用符号实体来表示特殊字符。
+            </p>
+            <p>
+                <q>code</q>元素不保留多余的空格和折行。
+            </p>
+            <div id="table2">
+                <img src="./images/code.png" alt="example" id="img3">
+                <img src="./images/pre.png" alt="example" id="img4">
+            </div>
+            <p>
+                Example:<br>
+                使用code标签：
+                <code>
+                    #include&lt;iostream&gt;
+                        int main&#40;&#41;{
+                            std::cout &lt;&lt; "Hello World!" &lt;&lt; std::endl;
+                        }
+                </code>
+                <br>
+                <br>
+                使用pre标签：
+            <pre>
+                    #include&lt;iostream&gt;
+                    int main&#40;&#41;{
+                        std::cout &lt;&lt; "Hello World!" &lt;&lt; std::endl;
+                    }
+                </pre>
+            </p>
+        </article>
+
+    </section>
+</body>
+
+</html>

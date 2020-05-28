@@ -1,0 +1,57 @@
+body {
+    background-image: url(images/background.jpg);
+}
+
+h1 {
+    text-align: center;
+    font-size: 300%;
+}
+
+ul {
+    background: rgb(255, 255, 255, 0.9);
+    margin: 0px 200px;
+    padding: 70px;
+    margin-bottom: 40px;
+}
+
+ul.movie > li {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 80px auto;
+    grid-template-areas: 
+        "title button"
+        "photo details";
+    margin-bottom: 40px;
+}
+
+p.title {
+    grid-area: title;
+    font-size: 120%;
+}
+
+img.pre {
+    width: 70%;
+    grid-area: photo;
+}
+
+p.details {
+    grid-area: details;
+    line-height: 200%;
+}
+
+button {
+    background: rgb(0, 0, 0); 
+    border:0 none;
+    cursor:pointer;
+    border-radius: 20px;
+    outline: none;
+    color: white;
+    grid-area: button;
+    justify-self: right;
+    align-self: center;
+    padding: 10px;
+}
+
+button:hover {
+    background: rgb(52, 65, 68);
+}

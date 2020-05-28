@@ -1,0 +1,41 @@
+body {
+    margin: 100px;
+    background-image: url(./images/background.jpg);
+    background-size: 100%;
+    background-repeat: repeat-y;
+}
+
+ul.movie > li {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 60px auto;
+    grid-template-areas: 
+        "title title"
+        "photo details";
+    margin-bottom: 30px;
+}
+
+p.title {
+    grid-area: title;
+    font-size: 120%;
+    font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+    color: rgb(28, 109, 134);
+}
+
+img.pre {
+    width: 80%;
+    grid-area: photo;
+}
+
+p.details {
+    grid-area: details;
+    line-height: 200%;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 150%;
+}

@@ -1,0 +1,57 @@
+html { 
+    background: url(images/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#main {
+    text-align: center;
+}
+
+.parts {
+    margin-top: 60px;
+}
+
+input[type=text] {
+    padding:10px; 
+    border:2px solid rgb(108, 194, 218); 
+    border-radius: 20px;
+    font-size: 18px;
+    outline: none;
+    color: rgb(77, 156, 201);
+}
+
+button {
+    margin-left: 15px;
+    padding: 10px 20px; 
+    background: rgb(108, 194, 218); 
+    border:0 none;
+    cursor:pointer;
+    border-radius: 20px;
+    font-size: 18px;
+    outline: none;
+    color: white;
+}
+
+button:hover {
+    background: rgb(43, 163, 196);
+}
+
+h1, h3 {
+    color: rgb(46, 101, 133);
+}
+
+h1 {
+    font-size: 300%;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+p {
+    font-size: 20px;
+    color: rgb(77, 156, 201);
+}

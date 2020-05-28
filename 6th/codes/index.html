@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Google Map</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Google Map</h1>
+    <p>Welcome to my school —— South China University Of Technology</p>
+    Nighttime Mode<input type="checkbox" id="check">
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            // Map options
+            var options = {
+                zoom: 12,
+                center: {lat: (23.048767 + 23.1513) / 2, lng: (113.400627 + 113.3447) / 2}
+            }
+
+            // New map
+            var map = new google.maps.Map(document.getElementById('map'), options);
+
+            // Array of markers
+            var markers = [
+                {
+                    coords: {lat: 23.048767, lng: 113.400627},
+                    iconImage:'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+                    content: '<h2>SCUT south campus</h2>'
+                },
+                {
+                    coords: {lat: 23.1513, lng: 113.3447},
+                    content: '<h2>SCUT north campus</h2>'
+                }
+            ];
+
+            // Loop through markers
+            for (let i = 0; i < markers.length; i++) {
+                addMarker(markers[i]);
+            }
+
+            // Add Marker Function
+            function addMarker(props) {
+                var marker = new google.maps.Marker({
+                position: props.coords,
+                map: map,
+                // icon: props.iconImage
+                });
+
+                if (props.iconImage) {
+                    marker.setIcon(props.iconImage);
+                }
+
+                if (props.content) {
+                    var infoWindow = new google.maps.InfoWindow({
+                        content: props.content
+                    });
+
+                    marker.addListener('click', function() {
+                        infoWindow.open(map, marker);
+                    });
+                }
+            }
+
+            const checkMode = document.getElementById('check');
+            checkMode.addEventListener('click', changeMode);
+            function changeMode() {
+                if (checkMode.checked == true) {
+                    map.setOptions({styles:[
+                        {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+                        {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+                        {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+                        {
+                        featureType: 'administrative.locality',
+                        elementType: 'labels.text.fill',
+                        stylers: [{color: '#d59563'}]
+                        },
+                        {
+                        featureType: 'poi',
+                        elementType: 'labels.text.fill',
+                        stylers: [{color: '#d59563'}]
+                        },
+                        {
+                        featureType: 'poi.park',
+                        elementType: 'geometry',
+                        stylers: [{color: '#263c3f'}]
+                        },
+                        {
+                        featureType: 'poi.park',
+                        elementType: 'labels.text.fill',
+                        stylers: [{color: '#6b9a76'}]
+                        },
+                        {
+                        featureType: 'road',
+                        elementType: 'geometry',
+                        stylers: [{color: '#38414e'}]
+                        },
+                        {
+                        featureType: 'road',
+                        elementType: 'geometry.stroke',
+                        stylers: [{color: '#212a37'}]
+                        },
+                        {
+                        featureType: 'road',
+                        elementType: 'labels.text.fill',
+                        stylers: [{color: '#9ca5b3'}]
+                        },
+                        {
+                        featureType: 'road.highway',
+                        elementType: 'geometry',
+                        stylers: [{color: '#746855'}]
+                        },
+                        {
+                        featureType: 'road.highway',
+                        elementType: 'geometry.stroke',
+                        stylers: [{color: '#1f2835'}]
+                        },
+                        {
+                        featureType: 'road.highway',
+                        elementType: 'labels.text.fill',
+                        stylers: [{color: '#f3d19c'}]
+                        },
+                        {
+                        featureType: 'transit',
+                        elementType: 'geometry',
+                        stylers: [{color: '#2f3948'}]
+                        },
+                        {
+                        featureType: 'transit.station',
+                        elementType: 'labels.text.fill',
+                        stylers: [{color: '#d59563'}]
+                        },
+                        {
+                        featureType: 'water',
+                        elementType: 'geometry',
+                        stylers: [{color: '#17263c'}]
+                        },
+                        {
+                        featureType: 'water',
+                        elementType: 'labels.text.fill',
+                        stylers: [{color: '#515c6d'}]
+                        },
+                        {
+                        featureType: 'water',
+                        elementType: 'labels.text.stroke',
+                        stylers: [{color: '#17263c'}]
+                        }]});
+                } else {
+                    map.setOptions({styles:null});
+                }
+            }
+        }
+    </script>
+    <script  async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACqs2l_2CZLew3H1YOukhrxOUO12AHB1Y&callback=initMap">
+    </script>
+</body>
+</html>

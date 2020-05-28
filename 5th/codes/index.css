@@ -1,0 +1,62 @@
+body {
+    width: 650px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+#title {
+    width: 100%;
+    text-align: center;
+    color: rgb(46, 101, 133);
+    margin-bottom: 60px;
+}
+
+#inputBlock {
+    display: flex;
+    justify-content: center;
+}
+
+textarea {
+    padding:10px; 
+    border:2px solid rgb(108, 194, 218); 
+    border-radius: 20px;
+    font-size: 18px;
+    outline: none;
+    color: rgb(77, 156, 201);
+    width: 100%;
+}
+
+#selectBlock {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+button {
+    width: 130px;
+    height: 40px;
+    margin: 10px;
+    background: rgb(108, 194, 218); 
+    border:0 none;
+    cursor:pointer;
+    border-radius: 20px;
+    font-size: 18px;
+    outline: none;
+    color: white;
+}
+
+button:hover {
+    background: rgb(43, 163, 196);
+}
+
+li {
+    list-style: none;
+    font-size: 20px;
+    color: rgb(77, 156, 201);
+    margin-top: 15px;
+}
+
+.keyFocus {
+    /* color: black; */
+    border: dotted rgba(43, 163, 196, 0.3) 2px;
+}
